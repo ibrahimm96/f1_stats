@@ -29,12 +29,16 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <nav>
-          <h1>DASHBOARD</h1>
-          <Link href="/info"> Info </Link>
+        <nav style={{ textAlign: 'center', paddingTop: '20px' }}>
+          <h1 style={{ marginBottom: '20px' }}>F1_STATS DASHBOARD</h1>
+          <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+            <Link href="/drivers" style={{ textDecoration: 'none' }}>Driver List</Link>
+            <Link href="/positions" style={{ textDecoration: 'none' }}>Driver Positions</Link>
+          </div>
         </nav>
         {children}
       </body>
     </html>
   );
 }
+
